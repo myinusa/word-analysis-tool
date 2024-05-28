@@ -2,6 +2,16 @@
 
 ## Description
 
+The Word Analysis Tool is a Python-based application designed to perform detailed analysis of text files. It provides functionalities such as word frequency analysis, stop word filtering, and exporting results to various formats. This tool is ideal for linguists, data analysts, and anyone interested in text analysis or natural language processing.
+
+## Steps
+
+- `curl -sSL <https://install.python-poetry.org> | python3 -`
+- `poetry install`
+- `poetry build`
+- `poetry shell`
+- `python3 -m word_analysis_tool` or `poetry run word-analysis --input_file example.txt`
+
 ## File Structure
 
 ```text

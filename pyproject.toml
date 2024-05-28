@@ -1,17 +1,22 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "word-analysis-tool"
+[tool.poetry]
+name = "word_analysis_tool"
 version = "0.1.0"
-description = ""
-authors = [{name = "Matthias"}]
+description = "A tool to analyze word frequency in text documents."
+authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
-readme = "README.md"
-requires-python = ">=3.7"
+packages = [{include = "word_analysis_tool", from = "."}]
 
-# [project.urls]
-# homepage = "https://example.com/spotify-daylist"
-# repository = "https://github.com/matthias/spotify-daylist"
-# documentation = "https://example.com/spotify-daylist/docs"
+# packages = [{include = "poetry_demo"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+# [tool.poetry.dev-dependencies]
+# pytest = "^6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+word-analysis = "word_analysis_tool.main:main"
